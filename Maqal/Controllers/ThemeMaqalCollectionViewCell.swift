@@ -11,7 +11,7 @@ class ThemeMaqalCollectionViewCell: UICollectionViewCell {
 
     static let ID = "ThemeMaqalCollectionViewCell"
 
-    private let imageLabel = UIImageView()
+    private let imageTheme = UIImageView()
     private let titleLabel = UILabel()
     private let translateLabel = UILabel()
 
@@ -26,9 +26,9 @@ class ThemeMaqalCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func layoutUI() {
-        contentView.addSubview(imageLabel)
-        imageLabel.snp.makeConstraints { make in
+    private func layoutUI() {
+        contentView.addSubview(imageTheme)
+        imageTheme.snp.makeConstraints { make in
             make.width.height.equalTo(128)
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(22)
@@ -37,7 +37,7 @@ class ThemeMaqalCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(imageLabel.snp.bottom).offset(14)
+            make.top.equalTo(imageTheme.snp.bottom).offset(14)
         }
 
         contentView.addSubview(translateLabel)
@@ -47,12 +47,12 @@ class ThemeMaqalCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    func detailsUI() {
+    private func detailsUI() {
         contentView.backgroundColor = Colors.BlueColor
         contentView.layer.cornerRadius = 15
 
-        imageLabel.contentMode = .scaleToFill
-        imageLabel.clipsToBounds = true
+        imageTheme.contentMode = .scaleToFill
+        imageTheme.clipsToBounds = true
 
         titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "Helvetica Neue", size: 16)
@@ -61,5 +61,11 @@ class ThemeMaqalCollectionViewCell: UICollectionViewCell {
         translateLabel.textColor = .white
         translateLabel.font = UIFont(name: "Helvetica Neue", size: 14)
         translateLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    }
+
+    func configureCell(themeMaqal: Theme) {
+        imageTheme.image = themeMaqal.image
+        titleLabel.text = themeMaqal.themeTitle
+        translateLabel.text = themeMaqal.themeTranslate
     }
 }

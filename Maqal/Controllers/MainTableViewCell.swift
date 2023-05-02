@@ -36,6 +36,7 @@ class MainTableViewCell: UITableViewCell {
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(230)
+            make.bottom.equalToSuperview()
         }
     }
 
@@ -56,7 +57,7 @@ class MainTableViewCell: UITableViewCell {
 
 extension MainTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataBase.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,6 +67,9 @@ extension MainTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
             withReuseIdentifier: ThemeMaqalCollectionViewCell.ID,
             for: indexPath
             ) as? ThemeMaqalCollectionViewCell else { return UICollectionViewCell() }
+
+            let theme = dataBase[indexPath.row]
+            cell.configureCell(themeMaqal: theme)
 
             return cell
         }
