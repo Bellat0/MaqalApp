@@ -17,6 +17,7 @@
 		94505B5229FF8D9F00D6C57D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 94505B5129FF8D9F00D6C57D /* SnapKit */; };
 		94505B5429FF8E8C00D6C57D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94505B5329FF8E8C00D6C57D /* Constants.swift */; };
 		94505B5629FFA27900D6C57D /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94505B5529FFA27900D6C57D /* HeaderSectionView.swift */; };
+		94505B5829FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94505B5729FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		94505B4E29FF8CFA00D6C57D /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		94505B5329FF8E8C00D6C57D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		94505B5529FFA27900D6C57D /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		94505B5729FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeMaqalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,9 @@
 		94505B4D29FF8CDB00D6C57D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				94505B4E29FF8CFA00D6C57D /* MainTableViewCell.swift */,
 				94505B5529FFA27900D6C57D /* HeaderSectionView.swift */,
+				94505B4E29FF8CFA00D6C57D /* MainTableViewCell.swift */,
+				94505B5729FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift */,
 			);
 			name = View;
 			path = Controllers;
@@ -182,6 +185,7 @@
 			files = (
 				94505B5429FF8E8C00D6C57D /* Constants.swift in Sources */,
 				94505B3A29FF889400D6C57D /* MainViewController.swift in Sources */,
+				94505B5829FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift in Sources */,
 				94505B3629FF889400D6C57D /* AppDelegate.swift in Sources */,
 				94505B5629FFA27900D6C57D /* HeaderSectionView.swift in Sources */,
 				94505B4F29FF8CFA00D6C57D /* MainTableViewCell.swift in Sources */,
@@ -329,8 +333,7 @@
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MaximTvilinev.Maqal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,8 +362,7 @@
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,9 +370,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MaximTvilinev.Maqal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

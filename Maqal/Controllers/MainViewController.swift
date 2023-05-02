@@ -41,11 +41,11 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
 
         searchBar.searchBarStyle = .minimal
-        
     }
 
     private func detailsTableView() {
         tableView.backgroundColor = Colors.LightGrayColor
+        tableView.separatorStyle = .none
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,8 +54,9 @@ class MainViewController: UIViewController {
             MainTableViewCell.self,
             forCellReuseIdentifier: MainTableViewCell.ID)
 
-        tableView.register(HeaderSectionView.self,
-                           forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
+        tableView.register(
+            HeaderSectionView.self,
+            forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
     }
 }
 
@@ -64,7 +65,6 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
-
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,6 +83,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         return UITableViewCell()
+    }
+
+    //MARK: didSelectRowAtItem
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     //MARK: viewForHeaderInSection

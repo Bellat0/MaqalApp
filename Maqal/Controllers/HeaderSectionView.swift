@@ -11,7 +11,7 @@ class HeaderSectionView: UITableViewHeaderFooterView {
 
     static let ID = "HeaderSectionView"
 
-    private let title = UILabel()
+    private let titleLabel = UILabel()
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -25,19 +25,20 @@ class HeaderSectionView: UITableViewHeaderFooterView {
     }
 
     private func layoutUI() {
-        contentView.addSubview(title)
-        title.snp.makeConstraints { make in
+        contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.bottom.equalToSuperview().offset(-10)
+            make.trailing.equalToSuperview().offset(-16)
         }
     }
 
     private func detailsTitle() {
-        title.font = UIFont.systemFont(ofSize: 18)
-        title.textColor = Colors.DarkGrayColor
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        titleLabel.textColor = Colors.DarkGrayColor
     }
 
     func detailsHeaderSectionView(title: String) {
-        self.title.text = title
+        self.titleLabel.text = title
     }
 }
