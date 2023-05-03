@@ -79,6 +79,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath
             ) as? MainTableViewCell else { return UITableViewCell() }
 
+            cell.navigationController = navigationController
+            
             return cell
         }
 

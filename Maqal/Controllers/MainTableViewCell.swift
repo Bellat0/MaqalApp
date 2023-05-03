@@ -9,6 +9,8 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    weak var navigationController: UINavigationController?
+
     static let ID = "MainTableViewCell"
 
     private let themeMaqalCollectionView: UICollectionView = {
@@ -81,6 +83,10 @@ extension MainTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+
+        let theme = dataBase[indexPath.row]
+        let maqalTableViewController = MaqalTableViewController(vcTitle: theme.title, selectedTheme: theme)
+        navigationController?.pushViewController(maqalTableViewController, animated: true)
     }
 }
 
