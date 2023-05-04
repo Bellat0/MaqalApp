@@ -57,6 +57,9 @@ class MainViewController: UIViewController {
         tableView.register(
             HeaderSectionView.self,
             forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
+
+        tableView.register(
+            RandomMaqalTableViewCell.self, forCellReuseIdentifier: RandomMaqalTableViewCell.ID)
     }
 }
 
@@ -82,9 +85,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.navigationController = navigationController
             
             return cell
-        }
+        } else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: RandomMaqalTableViewCell.ID,
+                for: indexPath
+            ) as? RandomMaqalTableViewCell else { return UITableViewCell() }
 
-        return UITableViewCell()
+            let randomThemeIndex = Int.random(in: 0..<dataBase.count)
+            let filteredMaqals = dataBase[randomThemeIndex].maqals.filter { $0.isShort }
+            let randomMaqalIndex = Int.random(in: 0..<filteredMaqals.count)
+
+            cell.configure(maqal: dataBase[randomThemeIndex].maqals[randomMaqalIndex])
+
+            return cell
+        }
     }
 
     //MARK: didSelectRowAtItem

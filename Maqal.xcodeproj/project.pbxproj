@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940022352A0397CB00446A2D /* RandomMaqalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940022342A0397CB00446A2D /* RandomMaqalTableViewCell.swift */; };
 		94388EF92A02435C00D196D6 /* MaqalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EF82A02435C00D196D6 /* MaqalTableViewController.swift */; };
 		94388EFB2A02437900D196D6 /* MaqalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EFA2A02437900D196D6 /* MaqalTableViewCell.swift */; };
 		94388EFD2A026E3100D196D6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EFC2A026E3100D196D6 /* FavoriteViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940022342A0397CB00446A2D /* RandomMaqalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMaqalTableViewCell.swift; sourceTree = "<group>"; };
 		94388EF82A02435C00D196D6 /* MaqalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewController.swift; sourceTree = "<group>"; };
 		94388EFA2A02437900D196D6 /* MaqalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewCell.swift; sourceTree = "<group>"; };
 		94388EFC2A026E3100D196D6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				94505B4E29FF8CFA00D6C57D /* MainTableViewCell.swift */,
 				94505B5729FFAA5A00D6C57D /* ThemeMaqalCollectionViewCell.swift */,
 				94388EFA2A02437900D196D6 /* MaqalTableViewCell.swift */,
+				940022342A0397CB00446A2D /* RandomMaqalTableViewCell.swift */,
 			);
 			name = View;
 			path = Controllers;
@@ -220,6 +223,7 @@
 				943ED80B2A01197300B5FCFB /* Maqal.swift in Sources */,
 				94388EFD2A026E3100D196D6 /* FavoriteViewController.swift in Sources */,
 				943ED8092A0113E900B5FCFB /* Database.swift in Sources */,
+				940022352A0397CB00446A2D /* RandomMaqalTableViewCell.swift in Sources */,
 				94505B4F29FF8CFA00D6C57D /* MainTableViewCell.swift in Sources */,
 				94505B3829FF889400D6C57D /* SceneDelegate.swift in Sources */,
 			);
