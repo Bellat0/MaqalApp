@@ -28,9 +28,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return UINavigationController(rootViewController: mainVC)
         }
 
+        func createFavoriteVC() -> UINavigationController {
+            let favoriteVC = FavoriteViewController()
+            favoriteVC.title = "Избранные пословицы"
+            favoriteVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "fav"), tag: 0)
+
+            return UINavigationController(rootViewController: favoriteVC)
+        }
+
         func createTabBarController() -> UITabBarController {
             let tabBarController = UITabBarController()
-            tabBarController.viewControllers = [createMainVC()]
+            tabBarController.viewControllers = [createMainVC(), createFavoriteVC()]
 
             return tabBarController
         }

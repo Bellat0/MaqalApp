@@ -86,15 +86,15 @@ extension MaqalTableViewController: UITableViewDelegate, UITableViewDataSource {
             title: ""
         ) { action, view, completion in
 
-                let maqal = self.selectedTheme.maqals[indexPath.row]
-                let shareController = UIActivityViewController(
-                    activityItems: [maqal.title + "\n" + maqal.translate],
-                    applicationActivities: nil)
+            let maqal = self.selectedTheme.maqals[indexPath.row]
+            let shareController = UIActivityViewController(
+                activityItems: [maqal.title + "\n" + maqal.translate],
+                applicationActivities: nil)
 
-                self.present(shareController, animated: true)
+            self.present(shareController, animated: true)
 
-                completion(true)
-            }
+            completion(true)
+        }
 
         action.backgroundColor = .systemGreen
         action.image = UIImage(systemName: "square.and.arrow.up")
@@ -109,6 +109,7 @@ extension MaqalTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+
         let action = UIContextualAction(
             style: .normal,
             title: ""

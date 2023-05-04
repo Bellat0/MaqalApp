@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94388EF92A02435C00D196D6 /* MaqalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EF82A02435C00D196D6 /* MaqalTableViewController.swift */; };
 		94388EFB2A02437900D196D6 /* MaqalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EFA2A02437900D196D6 /* MaqalTableViewCell.swift */; };
+		94388EFD2A026E3100D196D6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94388EFC2A026E3100D196D6 /* FavoriteViewController.swift */; };
 		943ED8072A010FE300B5FCFB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ED8062A010FE300B5FCFB /* Theme.swift */; };
 		943ED8092A0113E900B5FCFB /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ED8082A0113E900B5FCFB /* Database.swift */; };
 		943ED80B2A01197300B5FCFB /* Maqal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ED80A2A01197300B5FCFB /* Maqal.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		94388EF82A02435C00D196D6 /* MaqalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewController.swift; sourceTree = "<group>"; };
 		94388EFA2A02437900D196D6 /* MaqalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalTableViewCell.swift; sourceTree = "<group>"; };
+		94388EFC2A026E3100D196D6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		943ED8062A010FE300B5FCFB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		943ED8082A0113E900B5FCFB /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		943ED80A2A01197300B5FCFB /* Maqal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maqal.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				94505B3929FF889400D6C57D /* MainViewController.swift */,
 				94388EF82A02435C00D196D6 /* MaqalTableViewController.swift */,
+				94388EFC2A026E3100D196D6 /* FavoriteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				94388EFB2A02437900D196D6 /* MaqalTableViewCell.swift in Sources */,
 				94505B5629FFA27900D6C57D /* HeaderSectionView.swift in Sources */,
 				943ED80B2A01197300B5FCFB /* Maqal.swift in Sources */,
+				94388EFD2A026E3100D196D6 /* FavoriteViewController.swift in Sources */,
 				943ED8092A0113E900B5FCFB /* Database.swift in Sources */,
 				94505B4F29FF8CFA00D6C57D /* MainTableViewCell.swift in Sources */,
 				94505B3829FF889400D6C57D /* SceneDelegate.swift in Sources */,
